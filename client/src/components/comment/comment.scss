@@ -1,0 +1,19 @@
+@import "../../style.scss";
+
+.addItem {
+  border: 1px solid $border;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 50vw;
+
+  input {
+    width: 100%;
+    border: 1px solid transparent;
+    padding: 5px;
+  }
+}
+
+.err {
+  color: red;
+}
