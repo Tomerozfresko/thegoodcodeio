@@ -4,8 +4,11 @@ import cors from "cors";
 
 const app = express();
 
-const PORT = process.env.PORT || 4200;
+//Define our port to 4200
+const PORT = 4200;
 
+
+//Allowing CORS permissions
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -19,11 +22,16 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
+//Parses incoming JSON requests and puts the parsed data in req.body.
+app.use(express.json());
+
+
+//Define middlewares for /api/items
 app.use("/api/items", itemRoutes);
 
+//Activate Server
 app.listen(PORT, () => {
   console.log(`server is listening on port ${PORT}`);
 });

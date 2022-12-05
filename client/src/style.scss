@@ -11,7 +11,7 @@ $border: #ccc;
   padding: 0;
   box-sizing: border-box;
 }
-
+//The below pattern can help us to define other screen sizes design in a quickly manner
 @mixin mobile {
   @media (max-width: 480px) {
     @content;
