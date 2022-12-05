@@ -6,7 +6,7 @@ import AddComment from "../comment/Comment.jsx";
 import "./main.scss";
 
 function Main() {
-  // I will use React Query to ensure robust and DRY CRUD operations
+  // I am using React Query to ensure robust and DRY CRUD operations
   //Docs at https://tanstack.com/query/v4/docs/adapters/react-query
   const { isLoading, error, data } = useQuery(["items"], () =>
     makeRequest.get("http://localhost:4200/api/items").then((res) => {

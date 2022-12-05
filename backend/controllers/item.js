@@ -32,7 +32,7 @@ let items = [
 
 /*
 In larger project scope or DB connection
-error handelling and security best practices(tokens,Hashing etc...) will be applied!
+error handelling and security (tokens,Hashing etc...) will be applied!
 */
 
 export const getItems = (req, res) => {

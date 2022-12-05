@@ -7,7 +7,7 @@ import "./comment.scss";
 
 function AddComment() {
   const queryClient = useQueryClient();
-  // I'll use Formik and Yup for better form handelling and validation
+  // I am using Formik and Yup for better form handelling and validation
   // Docs at https://formik.org/docs/overview
   const formik = useFormik({
     initialValues: {
@@ -57,7 +57,7 @@ function AddComment() {
           id="comment"
           size="60"
           type="text"
-          placeholder={`Why do you think "thegoodcode is an owesome place to work for?`}
+          placeholder={`Why do you think "thegoodcode is an owesome place?`}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.comment}
